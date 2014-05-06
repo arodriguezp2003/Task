@@ -1,4 +1,5 @@
 Task
 ====
+Gestor de Notas , Tareas, Alertas 
 
-TaskManager
+API REST 

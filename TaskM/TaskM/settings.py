@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'notes',
     'alerts',
+    'organizations',
 )
 
 MIDDLEWARE_CLASSES = (
