@@ -5,9 +5,10 @@ admin.autodiscover()
 
 from rest_framework import routers
 from notes.views import NoteViewSet
-
+from alerts.views import AlertViewSet
 router = routers.DefaultRouter()
 router.register(r'notes',NoteViewSet)
+router.register(r'alerts',AlertViewSet)
 
 urlpatterns = patterns('',
     # Examples:
@@ -16,5 +17,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
 
 )
