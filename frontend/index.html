@@ -1,193 +1,137 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
+
     <head>
         <meta charset="utf-8">
-        <title>Puls3</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>TaskManager</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="author" content="ink, cookbook, recipes">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/estilos.css">
+        <!-- Place favicon.ico and apple-touch-icon(s) here  -->
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="shortcut icon" href="img/favicon.ico">
+  
+
+        <!-- load inks css from the cdn -->
+        <link rel="stylesheet" type="text/css" href="css/ink-flex.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+        <!-- load inks css for IE8 -->
+        <!--[if lt IE 9 ]>
+            <link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <![endif]-->
+
+        <!-- test browser flexbox support and load legacy grid if unsupported -->
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript">
+            Modernizr.load({
+              test: Modernizr.flexbox,
+              nope : 'css/ink-legacy.min.css'
+            });
+        </script>
+
+        <!-- load inks javascript files from the cdn -->
+        <script type="text/javascript" src="js/holder.js"></script>
+        <script type="text/javascript" src="js/ink-all.min.js"></script>
+        <script type="text/javascript" src="js/autoload.js"></script>
+
+
+        <style type="text/css">
+
+            body {
+                background: #FFF;
+            }
+
+            header h1 small:before  {
+                content: "|";
+                margin: 0 0.5em;
+                font-size: 1.6em;
+            }
+
+            footer {
+                background: #ccc;
+            }
+
+        </style>
+
     </head>
+
     <body>
 
-        <header>
-            <figure id="header_logo">
-                <a href=""><img src="img/logo.png" alt="logo"></a>
-            </figure>
-            <div id="header_titulo">
-                <h2>Puls3 - Dolor Sit amet</h2>
-                <nav>
-                    <ul>
-                        <a href=""><li>Home</li></a>
-                        <a href="https://github.com/agreencow/puls3"><li>GitHub</li></a>
+        <div class="ink-grid">
+
+            <!--[if lte IE 9 ]>
+            <div class="ink-alert basic">
+                <button class="ink-dismiss">&times;</button>
+                <p>
+                    <strong>You are using an outdated Internet Explorer version.</strong>
+                    Please <a href="http://browsehappy.com/">upgrade to a browser</a> to improve your web experience.
+                </p>
+            </div>
+            -->
+
+            <!-- Add your site or application content here -->
+
+            <header class="vertical-space">
+                <h1>TaskManager<small>b1</small></h1>
+                <nav class="ink-navigation">
+                    <ul class="menu rounded horizontal   red">
+                        <li class="heading active"><a href="#">Home</a></li>
+                        <li>
+                            <a href="#">Post archive</a>
+                            <ul class="submenu">
+                                <li><a href="#">January</a></li>
+                                <li><a href="#">February</a></li>
+                                <li><a href="#">March</a></li>
+                                <li><a href="#">...</a></li>
+                            </ul>
+                        </li>
+                        <li class="disabled"><a href="#">About</a></li>
                     </ul>
                 </nav>
+            </header>
+            <div class="column-group gutters">
+                <div class="all-100">
+                    <h2>Listado de Notas</h2>
+                    <table class="ink-table bordered hover alternating">
+                      <thead>
+                        <tr>
+                          <th class="align-left">ID</th>
+                          <th class="align-left">Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="orange">
+                          <td>1</td>
+                          <td>John</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Will</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Steve</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
             </div>
-            <figure id="header_user">
-               <a href=""><img src="img/user.jpg"></a> 
-            </figure>
-        </header>   
-
-        <section id="contenido">
-
-            <aside>
-                <div id="aside_header">
-                    <span aria-hidden="true" class="icon-arrow-down"></span>
-                    <h3>Alorium menu plus</h3>
-                </div>
-                <div id="aside_body">
-                    <p>
-                       Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. 
-                    </p>
-                </div>
-            </aside>
-
-            <!-- item -->
-            <article class="contenido_item">
-                <figure>
-                    <a href="#"><img src="img/img4.jpg"></a>
-                </figure>
-                <div class="item_info">
-                    <h2>Cumbilem walking</h2>
-                    <p class="item_posted">Posted by <a href="#">Carlos Jiménez</a></p>
-                    <span aria-hidden="true" class="icon-heart-2"></span>
-                </div>
-                <div class="item_extra">
-                    <p class ="extra_tag">corpora</p>
-                    <div class="extra_likes">
-                        <a class="likes_up" href="#"><span aria-hidden="true" class="icon-arrow-up"></span></a>
-                        <div class="likes_numero">345</div>
-                        <a class="likes_down" href="#"><span aria-hidden="true" class="icon-arrow-down"></span></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- item -->
-            <article class="contenido_item">
-                <figure>
-                    <a href="#"><img src="img/img3.jpg"></a>
-                </figure>
-                <div class="item_info">
-                    <h2>shaun ofthe dead scythe</h2>
-                    <p class="item_posted">Posted by <a href="#">Carlos Jiménez</a></p>
-                    <span aria-hidden="true" class="icon-heart-2"></span>
-                </div>
-                <div class="item_extra">
-                    <p class ="extra_tag">corpora</p>
-                    <div class="extra_likes">
-                        <a class="likes_up" href="#"><span aria-hidden="true" class="icon-arrow-up"></span></a>
-                        <div class="likes_numero">345</div>
-                        <a class="likes_down" href="#"><span aria-hidden="true" class="icon-arrow-down"></span></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- item -->
-            <article class="contenido_item">
-                <figure>
-                    <a href="#"><img src="img/img2.jpg"></a>
-                </figure>
-                <div class="item_info">
-                    <h2>Alii missing oculis aliorum</h2>
-                    <p class="item_posted">Posted by <a href="#">Carlos Jiménez</a></p>
-                    <span aria-hidden="true" class="icon-heart-2"></span>
-                </div>
-                <div class="item_extra">
-                    <p class ="extra_tag">corpora</p>
-                    <div class="extra_likes">
-                        <a class="likes_up" href="#"><span aria-hidden="true" class="icon-arrow-up"></span></a>
-                        <div class="likes_numero">345</div>
-                        <a class="likes_down" href="#"><span aria-hidden="true" class="icon-arrow-down"></span></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- item -->
-            <article class="contenido_item">
-                <figure>
-                    <a href="#"><img src="img/img1.jpg"></a>
-                </figure>
-                <div class="item_info">
-                    <h2>Animated corpses ipsa</h2>
-                    <p class="item_posted">Posted by <a href="#">Carlos Jiménez</a></p>
-                    <span aria-hidden="true" class="icon-heart-2"></span>
-                </div>
-                <div class="item_extra">
-                    <p class ="extra_tag">corpora</p>
-                    <div class="extra_likes">
-                        <a class="likes_up" href="#"><span aria-hidden="true" class="icon-arrow-up"></span></a>
-                        <div class="likes_numero">345</div>
-                        <a class="likes_down" href="#"><span aria-hidden="true" class="icon-arrow-down"></span></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- item -->
-            <article class="contenido_item">
-                <figure>
-                    <a href="#"><img src="img/img4.jpg"></a>
-                </figure>
-                <div class="item_info">
-                    <h2>Brains Undead zombies</h2>
-                    <p class="item_posted">Posted by <a href="#">Carlos Jiménez</a></p>
-                    <span aria-hidden="true" class="icon-heart-2"></span>
-                </div>
-                <div class="item_extra">
-                    <p class ="extra_tag">corpora</p>
-                    <div class="extra_likes">
-                        <a class="likes_up" href="#"><span aria-hidden="true" class="icon-arrow-up"></span></a>
-                        <div class="likes_numero">345</div>
-                        <a class="likes_down" href="#"><span aria-hidden="true" class="icon-arrow-down"></span></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- item -->
-            <article class="contenido_item">
-                <figure>
-                    <a href="#"><img src="img/img3.jpg"></a>
-                </figure>
-                <div class="item_info">
-                    <h2>Ficedens walking deadsentio</h2>
-                    <p class="item_posted">Posted by <a href="#">Carlos Jiménez</a></p>
-                    <span aria-hidden="true" class="icon-heart-2"></span>
-                </div>
-                <div class="item_extra">
-                    <p class ="extra_tag">corpora</p>
-                    <div class="extra_likes">
-                        <a class="likes_up" href="#"><span aria-hidden="true" class="icon-arrow-up"></span></a>
-                        <div class="likes_numero">345</div>
-                        <a class="likes_down" href="#"><span aria-hidden="true" class="icon-arrow-down"></span></a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- item -->
-            <article class="contenido_item">
-                <figure>
-                    <a href="#"><img src="img/img2.jpg"></a>
-                </figure>
-                <div class="item_info">
-                    <h2>The epidemic signi</h2>
-                    <p class="item_posted">Posted by <a href="#">Carlos Jiménez</a></p>
-                    <span aria-hidden="true" class="icon-heart-2"></span>
-                </div>
-                <div class="item_extra">
-                    <p class ="extra_tag">corpora</p>
-                    <div class="extra_likes">
-                        <a class="likes_up" href="#"><span aria-hidden="true" class="icon-arrow-up"></span></a>
-                        <div class="likes_numero">345</div>
-                        <a class="likes_down" href="#"><span aria-hidden="true" class="icon-arrow-down"></span></a>
-                    </div>
-                </div>
-            </article>
-
-        </section>
-
-        <script src="js/main.js"></script>
+  
+        </div>
+        <footer class="clearfix red">
+            <div class="ink-grid">
+                <ul class="unstyled inline half-vertical-space">
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+                <p class="note">Identification of the owner of the copyright, either by name, abbreviation, or other designation by which it is generally known.</p>
+            </div>
+        </footer>
     </body>
 </html>
