@@ -1,0 +1,63 @@
+
+<div id="alerta" class="panel-body">
+  <h1>Alertas <small>version 1.0</small></h1>
+  <div id="Lok" style="display: none" class="alert alert-success">
+    Alerta Agregada Correctamente
+  </div>
+  <div id="Linv" style="display: none" class="alert alert-danger">
+    Los datos ingresados no son validos
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">Ingrese los datos requeridos</div>
+    <div class="panel-body">
+      <form role="form">
+        <div class="form-group">
+          <label for="Atitulo">Titulo</label>
+          <input type="text" class="form-control input-sm" id="Atitulo" placeholder="Ingrese un Titulo">
+        </div>
+        <div class="form-group">
+          <label for="Afecha">Fecha Alerta</label>
+          <input type="datetime-local" class="form-control input-sm" id="Afecha" >
+        </div>
+        <div class="form-group">
+          <label for="Adescripcion">Descripcion</label>
+          <textarea  class="form-control" id="Adescripcion input-sm" placeholder="Ingrese una Descripcion"></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">Listado</div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Operaciones</th>
+
+          </tr>
+        </thead>
+        <tbody id="Atbody">
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<script id="alerta_tpl" type="text/template">
+
+<td>{{alert.date}}</td>
+<td>{{alert.title}}</td>
+<td>{{alert.text}}</td>
+<td> <a  id="mod" src="#"><span class="glyphicon glyphicon-refresh"></span></a> | <a id="el" src="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+
+
+</script> 

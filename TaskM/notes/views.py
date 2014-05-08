@@ -10,4 +10,9 @@ class NoteViewSet(viewsets.ModelViewSet):
 	serializer_class = NoteSerializer
 	filter_backends = (filters.DjangoFilterBackend,)
 	filter_fields =('userId',)
- 
+
+from django.http import HttpResponse
+
+def listar(request,user,passw):
+	 
+	 return HttpResponse(passw)

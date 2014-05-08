@@ -2,13 +2,13 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		bb_generate: {
 			options: {
-				appname       : "Tk",
-				appsrc        : "public/js/backbone",
-				routersrc     : "public/js/backbone/routers/",
-				modelsrc      : "public/js/backbone/models/",
-				viewsrc       : "public/js/backbone/views/",
-				collectionsrc : "public/js/backbone/collections/",
-				templatesrc   : "public/js/backbone/templates/"
+				appname       : "RS",
+				appsrc        : "js/backbone",
+				routersrc     : "js/backbone/routers/",
+				modelsrc      : "js/backbone/models/",
+				viewsrc       : "js/backbone/views/",
+				collectionsrc : "js/backbone/collections/",
+				templatesrc   : "js/backbone/templates/"
 			},
 			router:{},
 			view:{},
@@ -24,14 +24,14 @@ module.exports = function(grunt) {
 			},
 			app : {
 				files: {
-					'public/app.min.js' : [
-						'public/js/init.js',
-						'public/js/backbone/models/article.js',
-						'public/js/backbone/collections/articles.js',
-						'public/js/backbone/routers/base.js',
-						'public/js/backbone/views/article.js',
-						'public/js/backbone/views/articleNew.js',
-						'public/js/main.js'
+					'app.min.js' : [
+						'js/init.js',
+						'js/backbone/models/article.js',
+						'js/backbone/collections/articles.js',
+						'js/backbone/routers/base.js',
+						'js/backbone/views/article.js',
+						'js/backbone/views/articleNew.js',
+						'js/main.js'
 					]
 				}
 			}

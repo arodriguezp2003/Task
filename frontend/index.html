@@ -1,137 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=2.0, width=device-width" />
+  <title>TaskM</title>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>TaskManager</title>
-        <meta name="description" content="">
-        <meta name="author" content="ink, cookbook, recipes">
-        <meta name="HandheldFriendly" content="True">
-        <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-        <!-- Place favicon.ico and apple-touch-icon(s) here  -->
-
-        <link rel="shortcut icon" href="img/favicon.ico">
-  
-
-        <!-- load inks css from the cdn -->
-        <link rel="stylesheet" type="text/css" href="css/ink-flex.min.css">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
-        <!-- load inks css for IE8 -->
-        <!--[if lt IE 9 ]>
-            <link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <![endif]-->
-
-        <!-- test browser flexbox support and load legacy grid if unsupported -->
-        <script type="text/javascript" src="js/modernizr.js"></script>
-        <script type="text/javascript">
-            Modernizr.load({
-              test: Modernizr.flexbox,
-              nope : 'css/ink-legacy.min.css'
-            });
-        </script>
-
-        <!-- load inks javascript files from the cdn -->
-        <script type="text/javascript" src="js/holder.js"></script>
-        <script type="text/javascript" src="js/ink-all.min.js"></script>
-        <script type="text/javascript" src="js/autoload.js"></script>
-
-
-        <style type="text/css">
-
-            body {
-                background: #FFF;
-            }
-
-            header h1 small:before  {
-                content: "|";
-                margin: 0 0.5em;
-                font-size: 1.6em;
-            }
-
-            footer {
-                background: #ccc;
-            }
-
-        </style>
-
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/ladda-bootstrap.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
     </head>
-
     <body>
-
-        <div class="ink-grid">
-
-            <!--[if lte IE 9 ]>
-            <div class="ink-alert basic">
-                <button class="ink-dismiss">&times;</button>
-                <p>
-                    <strong>You are using an outdated Internet Explorer version.</strong>
-                    Please <a href="http://browsehappy.com/">upgrade to a browser</a> to improve your web experience.
-                </p>
-            </div>
-            -->
-
-            <!-- Add your site or application content here -->
-
-            <header class="vertical-space">
-                <h1>TaskManager<small>b1</small></h1>
-                <nav class="ink-navigation">
-                    <ul class="menu rounded horizontal   red">
-                        <li class="heading active"><a href="#">Home</a></li>
-                        <li>
-                            <a href="#">Post archive</a>
-                            <ul class="submenu">
-                                <li><a href="#">January</a></li>
-                                <li><a href="#">February</a></li>
-                                <li><a href="#">March</a></li>
-                                <li><a href="#">...</a></li>
-                            </ul>
-                        </li>
-                        <li class="disabled"><a href="#">About</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="column-group gutters">
-                <div class="all-100">
-                    <h2>Listado de Notas</h2>
-                    <table class="ink-table bordered hover alternating">
-                      <thead>
-                        <tr>
-                          <th class="align-left">ID</th>
-                          <th class="align-left">Name</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="orange">
-                          <td>1</td>
-                          <td>John</td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>Will</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>Steve</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                </div>
-            </div>
-  
-        </div>
-        <footer class="clearfix red">
-            <div class="ink-grid">
-                <ul class="unstyled inline half-vertical-space">
-                    <li class="active"><a href="#">About</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Contacts</a></li>
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">TaskManager</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+              <li><a href="#about">DashBoard</a></li>
+              <li><a href="#about">Alertas</a></li>
+              <li><a href="#contact">Notas</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administracion <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
                 </ul>
-                <p class="note">Identification of the owner of the copyright, either by name, abbreviation, or other designation by which it is generally known.</p>
-            </div>
-        </footer>
-    </body>
-</html>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+      <br><br><br>
+      <div id="container_tab" class="container theme-showcase" role="main">
+
+
+      </div>
+
+      <div id="login" class="panel-body">
+
+        <form id="form-signin" class="form-signin" role="form">
+
+          <h2 class="form-signin-heading">Login de Usuarios</h2>
+          <div id="Uinv" style="display: none" class="alert alert-danger">
+            Usuario o Contraseña Invalida
+          </div>
+          <div id="Udatos" style="display: none" class="alert alert-warning">
+            Ingrese los datos requeridos
+          </div>
+          <div id="frm_o">
+            <input id="user" type="text" class="form-control" placeholder="Usuario"  autofocus>
+            <input id="pass" type="password" class="form-control" placeholder="Password" >
+            <button id="Uenviar" class="btn btn-primary btn-lg ladda-button" data-style="zoom-out" style="width: 100%"><span class="ladda-label">Login</span><span class="ladda-spinner"></span><div class="ladda-progress" style="width: 100%"></div></button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/backbone.js"></script>
+    <script src="js/vendor/swig.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/spin.min.js"></script>
+    <script src="js/vendor/ladda.min.js"></script>
+
+    <script src="js/init.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/backbone/models/alert.js"></script>
+    <script src="js/backbone/collections/alerts.js"></script>
+    <script src="js/backbone/views/alert.js"></script>
+
+
+
+
+  </body>
+  </html>
